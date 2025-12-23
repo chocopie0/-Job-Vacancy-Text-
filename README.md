@@ -72,3 +72,27 @@ Ringkasan Hasil (Contoh)
 
 > **Kesimpulan:**  
 Model **BERT pretrained** memberikan hasil paling optimal karena mampu menangkap konteks semantik pada deskripsi lowongan pekerjaan.
+
+👨‍💻 Identitas Pengembang
+
+Proyek ini dibuat sebagai syarat kelulusan praktikum.
+
+Nama: Lika Anjelina
+
+NIM: 👨‍💻 Identitas Pengembang
+
+Proyek ini dibuat sebagai syarat kelulusan praktikum.
+
+Nama: Lika Anjelina
+
+NIM: 202210370311269
+
+Kelas: Machine Learning C
+
+Universitas: Universitas Muhammadiyah Malang
+
+Kelas: Machine Learning C
+
+Program Studi: Informatika
+
+Universitas: Universitas Muhammadiyah Malang
