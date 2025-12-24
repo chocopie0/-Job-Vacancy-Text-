@@ -1,6 +1,5 @@
 # -Job-Vacancy-Text-
-Klasifikasi Teks Lowongan Pekerjaan Menggunakan Neural Network dan Transfer Learning (Pretrained BERT)
-[Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+Klasifikasi Teks Lowongan Pekerjaan Menggunakan LSTM (Long Short-Term Memory), BERT (Bidirectional Encoder Representations from Transformers), dan DistilBERT (Distilled Bidirectional Encoder Representations from Transformers).(https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![BERT](https://img.shields.io/badge/BERT-Transformer-yellow?style=for-the-badge)
 
@@ -8,7 +7,7 @@ Klasifikasi Teks Lowongan Pekerjaan Menggunakan Neural Network dan Transfer Lear
 
 <p align="center">
   <b>Klasifikasi otomatis teks lowongan pekerjaan berbasis NLP</b><br>
-  Neural Network | Transfer Learning | Pretrained BERT
+  LSTM (Long Short-Term Memory), BERT (Bidirectional Encoder Representations from Transformers), dan DistilBERT (Distilled Bidirectional Encoder Representations from Transformers).
 </p>
 
 </div>
@@ -16,7 +15,7 @@ Klasifikasi Teks Lowongan Pekerjaan Menggunakan Neural Network dan Transfer Lear
 ---
 
 ## 📝 Deskripsi Proyek
-Proyek ini bertujuan untuk melakukan **klasifikasi teks lowongan pekerjaan** menggunakan pendekatan **Natural Language Processing (NLP)**.  
+Proyek ini bertujuan untuk melakukan **klasifikasi teks lowongan pekerjaan** LSTM (Long Short-Term Memory), BERT (Bidirectional Encoder Representations from Transformers), dan DistilBERT (Distilled Bidirectional Encoder Representations from Transformers).
 Model dikembangkan dengan membandingkan **Neural Network konvensional** dan **Transfer Learning menggunakan pretrained BERT** untuk melihat performa klasifikasi teks yang lebih kompleks.
 
 Proyek ini dibuat sebagai bagian dari **tugas / penelitian Machine Learning** dengan fokus pada pemanfaatan model bahasa modern untuk memahami konteks deskripsi pekerjaan.
@@ -50,10 +49,13 @@ Tahapan preprocessing teks yang dilakukan meliputi:
 🧠 Model yang Digunakan
 Proyek ini menggunakan dua pendekatan utama:
 
-| Tipe Model | Nama Model | Deskripsi |
-|----------|-----------|----------|
-| Neural Network | Feed Forward Neural Network | Model dasar berbasis embedding dan dense layer |
-| Transfer Learning | **Pretrained BERT** | Model Transformer dengan bobot pretrained untuk bahasa alami |
+| Model                         | Akurasi   | Keterangan                                                                                                      |
+| ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| Neural Network                | 0.8x      | Cukup baik untuk klasifikasi teks sederhana, namun kurang optimal dalam menangkap konteks kalimat yang kompleks |
+| LSTM (Long Short-Term Memory) | 0.8x      | Mampu mempelajari dependensi urutan kata, tetapi performanya terbatas pada teks dengan konteks panjang          |
+| DistilBERT                    | 0.8x–0.9x | Lebih ringan dan efisien dibandingkan BERT, dengan performa yang relatif mendekati                              |
+| BERT Pretrained               | **0.9x**  | Memberikan performa terbaik karena mampu memahami konteks semantik kalimat secara dua arah                      |
+ |
 
  📈 Evaluasi Model
 Evaluasi dilakukan menggunakan beberapa metrik berikut:
@@ -64,15 +66,16 @@ Evaluasi dilakukan menggunakan beberapa metrik berikut:
 - F1-Score
 - Confusion Matrix
 
-Ringkasan Hasil (Contoh)
-| Model | Accuracy | Keterangan |
-|------|----------|------------|
-| Neural Network | 0.8x | Cukup baik untuk teks sederhana |
-| BERT Pretrained | **0.9x** | Performa terbaik, mampu memahami konteks kalimat |
+| Model                         | Akurasi   | Keterangan                                                                                                      |
+| ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| Neural Network                | 0.8x      | Cukup baik untuk klasifikasi teks sederhana, namun kurang optimal dalam menangkap konteks kalimat yang kompleks |
+| LSTM (Long Short-Term Memory) | 0.8x      | Mampu mempelajari dependensi urutan kata, tetapi performanya terbatas pada teks dengan konteks panjang          |
+| DistilBERT                    | 0.8x–0.9x | Lebih ringan dan efisien dibandingkan BERT, dengan performa yang relatif mendekati                              |
+| BERT Pretrained               | **0.9x**  | Memberikan performa terbaik karena mampu memahami konteks semantik kalimat secara dua arah                      |
 
-> **Kesimpulan:**  
-Model **BERT pretrained** memberikan hasil paling optimal karena mampu menangkap konteks semantik pada deskripsi lowongan pekerjaan.
-
+Kesimpulan
+Berdasarkan hasil pengujian, model BERT pretrained menunjukkan performa paling optimal dibandingkan model Neural Network, LSTM, dan DistilBERT. Hal ini disebabkan oleh kemampuan BERT dalam memahami konteks semantik kalimat secara dua arah (bidirectional), sehingga lebih efektif dalam memproses deskripsi lowongan pekerjaan yang memiliki struktur bahasa kompleks.
+Model DistilBERT dapat menjadi alternatif yang efisien dengan performa yang relatif mendekati BERT, terutama ketika keterbatasan sumber daya komputasi menjadi pertimbangan. Sementara itu, LSTM dan Neural Network konvensional masih memberikan hasil yang cukup baik, namun kurang optimal dalam menangani konteks kalimat yang panjang dan kompleks.
 👨‍💻 Identitas Pengembang
 
 Proyek ini dibuat sebagai syarat kelulusan praktikum.
